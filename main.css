@@ -1,0 +1,18 @@
+body {
+  font-family: monospace;
+  background-color: oldlace;
+  margin: 0;
+}
+
+header {
+  background-color: darkkhaki;
+}
+
+ul {
+  list-style-type: none;
+  margin: inherit;
+}
+
+h1 {
+  margin: inherit;
+}
