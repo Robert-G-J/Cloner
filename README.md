@@ -22,7 +22,16 @@ as the variable `copy` points to the same object as `obj` does.
 ```
 $ open SpecRunner.html
 ```
-And open the console (CMD-OPT-J for Chrome) to see the tests pass and to play with the code.
+And open the console (`CMD-OPT-J` for Chrome) to see the tests pass and to play with the code, e.g:
+
+```javascript
+var obj = {names: {forename: "Johnny", surname: "Utah"}, mainAbility: "catching tubes"};
+var clone = deepClone(obj);
+clone === obj;
+// false (😄 )
+JSON.stringify(clone) === JSON.stringify(obj);
+// true ( 👍 )
+```
 
 ## Approach
 
@@ -33,3 +42,5 @@ Realising that this was asking me to 'walk the tree' of the object, I defined a 
 Testing has been achieved using a vanilla javascript test library I have written, given that the task asked not to use 3rd Party Frameworks or libraries.
 
 Tests can be checked by opening SpecRunner.html and opening the console.
+
+![image](./src-images/tests-passing.png)
